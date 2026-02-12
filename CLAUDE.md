@@ -10,18 +10,28 @@ Fast-FEM is a compressed 9-week self-directed learning project (Feb 23 – Apr 1
 - **ME440** (Vibrations) — modal analysis, forced vibration, vibration absorbers
 - **ME379** (Thermal-Fluid) — convection, boundary layers, heat transfer
 
-The repository currently contains learning schedules and reference material (no simulation code or ANSYS project files yet).
+Goals are both course project delivery and portfolio-quality documentation.
 
 ## Repository Structure
 
-- `schedule_canonical.md` — **Active schedule.** Compressed 9-week plan (Feb 23 start) with dates, course tie-ins, daily tasks, and checkboxes
-- `config.md` — Hardware specs (Dell Precision 5860, Xeon W3-2425, RTX 2000 Ada 16GB), ANSYS settings, and performance expectations
-- `references.md` — Central index of textbook chapters, ANSYS tutorials, and URLs organized by topic with schedule week mapping
-- `validation.md` — Quick-reference sheet of all hand-calc formulas for verifying ANSYS results
-- `README.md` — Project goals and future aspirations
-- `schedule.md` — Original 12-week FEM curriculum (superseded by canonical)
-- `grounded_schedule.md` — Semester-aligned variant (superseded by canonical)
-- `schedule_with_weld.md` — Weld-focused variant (superseded by canonical)
+### Planning & Reference
+- `schedule_canonical.md` — **Active schedule.** 9-week plan (Feb 23 start) with daily tasks and checkboxes
+- `config.md` — Hardware specs (Dell Precision 5860, Xeon W3-2425, RTX 2000 Ada 16GB) and ANSYS settings
+- `references.md` — 100+ learning resources: courses, tutorials, YouTube, forums, weld standards
+- `validation.md` — Hand-calc formulas for verifying ANSYS results
+
+### Projects
+- `projects/me3601_brief.md` — ME3601 project scope (TBD — fill in when assigned)
+- `projects/me440_brief.md` — ME440 project scope (TBD)
+- `projects/me379_brief.md` — ME379 project scope (TBD)
+
+### Results & Documentation
+- `sim_log.md` — Chronological simulation journal (date, model, mesh, result, error, lessons)
+- `results/week_XX/` — Validation reports and screenshots organized by week
+- `templates/validation_report.md` — Reusable template for documenting each simulation
+
+### Legacy (superseded by canonical schedule)
+- `schedule.md`, `grounded_schedule.md`, `schedule_with_weld.md`
 
 ## Key References
 
@@ -35,7 +45,7 @@ See `references.md` for the full index. Primary sources:
 
 ## Validation Approach
 
-See `validation.md` for the full formula sheet. Each weekly milestone validates ANSYS results against analytical hand calculations across static stress, buckling, beam deflection, thermal, pressure vessels, vibrations, fatigue, welds, and CFD.
+See `validation.md` for the full formula sheet. Each weekly milestone validates ANSYS results against analytical hand calculations. Every simulation should be documented using `templates/validation_report.md` and logged in `sim_log.md`.
 
 ## Hardware Notes
 
