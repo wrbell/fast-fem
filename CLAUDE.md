@@ -78,7 +78,7 @@ See `reference/methodology.md` for the full V&V workflow. See `reference/validat
 ## Hardware Notes
 
 See `plan/config.md` for full details. Key constraints:
-- 6-core Xeon W3-2425 — use 4–5 cores for ANSYS solver (SMP mode)
+- 6-core Xeon W3-2425 — use 4 cores for ANSYS solver (SMP mode; 4 cores without HPC license)
 - 64GB DDR5 — well above Student Edition element limits
 - RTX 2000 Ada — display/visualization only, GPU solver disabled
-- Student Edition caps: 128K elements (Mechanical), 512K cells (Fluent)
+- Student Edition caps: ~128K nodes+elements combined (Mechanical), ~512K cells+nodes combined (Fluent)

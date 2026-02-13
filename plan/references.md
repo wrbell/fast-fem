@@ -9,24 +9,22 @@ Organized by topic. Textbook chapters map to the canonical schedule weeks where 
 ### Hughes, T.J.R. — *The Finite Element Method* (primary theory)
 | Chapter | Topic | Schedule Week |
 |---------|-------|---------------|
-| Ch. 1–2 | Intro to FEM, weak formulation, 1D elasticity/heat | 1 |
-| Ch. 3 | Multidimensional problems, shape functions, assembly | 1 |
-| Ch. 4 | Isoparametric elements, quadrature | 2 (break reading) |
-| Ch. 5–6 | Nonlinearity, incremental methods | 7 |
-| Ch. 7 | Beam theory (Timoshenko vs. Euler-Bernoulli) | 2 (break), 4 |
-| Ch. 8 | Plates & shells (Kirchhoff) | 2 (break), 4 |
-| Ch. 9 | Eigenvalue problems, modal analysis | 5 |
+| Ch. 1–2 | Intro to FEM, weak formulation, 1D elasticity/heat; 2D/3D BVPs | 1 |
+| Ch. 3 | Isoparametric elements, shape functions, numerical integration | 1 |
+| Ch. 4 | Mixed and penalty methods, reduced integration | 2 (break reading) |
+| Ch. 5 | Plates and beams (C⁰ approach, Timoshenko vs. Euler-Bernoulli) | 2 (break), 4 |
+| Ch. 6 | Curved structural elements (shells) | 2 (break), 4 |
+| Ch. 10 | Eigenvalue problem solution techniques (modal analysis) | 5 |
 
 ### Shigley, J.E. — *Mechanical Engineering Design*
 | Chapter | Topic | Schedule Week |
 |---------|-------|---------------|
 | Ch. 3 | Stress/strain fundamentals | 1 |
 | Ch. 4 | Static failure, buckling | 1 |
-| Ch. 6 | Fatigue (S-N curves, endurance limit, Marin factors) | 2 (break), 3, 7 |
+| Ch. 6.1–6.6 | Fatigue (S-N method §6-2, endurance limit §6-4, Marin factors §6-6) | 2 (break), 3, 7 |
 | Ch. 7 | Shafts and shaft components | 4 |
-| Ch. 9.1–9.3 | Welded joints — static strength | 1 |
-| Ch. 9.4–9.6 | Welded joints — eccentric loads | 1 |
-| Ch. 9.7–9.9 | Welded joints — fatigue | 2 (break), 3 |
+| Ch. 9.1–9.6 | Welded joints — symbols, stress analysis (torsion §9-3, bending §9-4), strength §9-5, static loading §9-6 | 1 |
+| Ch. 9.7 | Welded joints — fatigue loading | 2 (break), 3 |
 
 ### Cottrell, J. — *Isogeometric Analysis*
 | Chapter | Topic | Schedule Week |
@@ -36,8 +34,10 @@ Organized by topic. Textbook chapters map to the canonical schedule weeks where 
 ### Inman, D. — *Engineering Vibration*
 | Chapter | Topic | Schedule Week |
 |---------|-------|---------------|
-| Ch. 4–6 | Forced/damped vibrations, harmonic analysis | 2 (break), 5 |
-| Ch. 9 | Multi-DOF systems, natural frequencies | 5 |
+| Ch. 1–3 | Free vibration, harmonic excitation, general forced response | 2 (break) |
+| Ch. 4 | Multiple-degree-of-freedom systems | 2 (break), 5 |
+| Ch. 5 | Design for vibration suppression (absorbers) | 5 |
+| Ch. 6 | Distributed-parameter systems (beam vibration) | 5 |
 
 ### Cengel, Y. — *Heat Transfer: A Practical Approach*
 | Chapter | Topic | Schedule Week |
@@ -48,9 +48,10 @@ Organized by topic. Textbook chapters map to the canonical schedule weeks where 
 ### Hertzberg — *Deformation and Fracture Mechanics of Engineering Materials* (Wiley, 6th ed., ISBN 978-1119670578)
 | Chapter | Topic | Schedule Week |
 |---------|-------|---------------|
-| Ch. 5–8 | Weld fatigue methods, hot-spot stress, variable amplitude | 2 (break) |
-| Ch. 6 | Welds in rotating components | 4 |
-| Ch. 9 | Weld optimization | 7 |
+| Ch. 5–6 | Fracture overview, elements of fracture mechanics (stress intensity factors) | 2 (break), 4 |
+| Ch. 9 | Cyclic stress and strain fatigue (S-N, strain-life) | 2 (break), 7 |
+| Ch. 10 | Fatigue crack propagation (da/dN, Paris law) | 7 |
+| Ch. 11 | Analyses of engineering failures | 7 |
 
 ---
 
@@ -238,6 +239,95 @@ Organized by topic. Textbook chapters map to the canonical schedule weeks where 
 2. Hughes Ch. 1–3 (weak form, shape functions)
 3. Cengel Ch. 2 (thermal)
 4. Shigley Ch. 6 + Ch. 9.7–9.9 (fatigue + weld fatigue)
-5. Hughes Ch. 7–8 (beams, plates, shells)
-6. Inman Ch. 4–6, 9 (vibrations overview)
-7. Hertzberg Ch. 5–8 (fatigue, fracture, weld specifics)
+5. Hughes Ch. 5–6 (beams, plates, shells)
+6. Inman Ch. 1–6 (vibrations overview — free, forced, MDOF, absorbers, distributed)
+7. Hertzberg Ch. 5–6 (fracture mechanics), Ch. 9–10 (cyclic fatigue, crack propagation)
+
+---
+
+## Full Tables of Contents (verified reference)
+
+These are the confirmed chapter structures for our primary textbooks. Use these to verify any chapter references in the schedule or validation formulas.
+
+### Hughes — *The Finite Element Method: Linear Static and Dynamic Finite Element Analysis* (Prentice-Hall 1987 / Dover 2000)
+
+**Part One: Linear Static Analysis**
+1. Fundamental Concepts; A Simple One-Dimensional Boundary-Value Problem
+2. Formulation of Two- and Three-Dimensional Boundary-Value Problems
+3. Isoparametric Elements and Elementary Programming Concepts
+4. Mixed and Penalty Methods, Reduced and Selective Integration, and Sundry Variational Crimes
+5. The C⁰-Approach to Plates and Beams
+6. The C⁰-Approach to Curved Structural Elements
+
+**Part Two: Linear Dynamic Analysis**
+7. Formulation of Parabolic, Hyperbolic, and Elliptic-Eigenvalue Problems
+8. Algorithms for Parabolic Problems
+9. Algorithms for Hyperbolic and Parabolic-Hyperbolic Problems
+10. Solution Techniques for Eigenvalue Problems
+11. Dlearn — A Linear Static and Dynamic Finite Element Analysis Program
+
+*Note: Hughes covers LINEAR FEM only. For nonlinear FEM theory, see Bathe or Crisfield.*
+
+### Shigley (Budynas/Nisbett) — *Mechanical Engineering Design* (10th/11th ed.)
+1. Introduction to Mechanical Engineering Design
+2. Materials
+3. Load and Stress Analysis
+4. Deflection and Stiffness
+5. Failures Resulting from Static Loading
+6. Fatigue Failure Resulting from Variable Loading
+7. Shafts and Shaft Components
+8. Screws, Fasteners, and the Design of Nonpermanent Joints
+9. Welding, Bonding, and the Design of Permanent Joints
+
+**Ch. 6 Sub-Sections (Fatigue):**
+- 6-1 Introduction to Fatigue in Metals
+- 6-2 The Stress-Life Method (S-N curves)
+- 6-3 The Strain-Life Method
+- 6-4 The Endurance Limit
+- 6-5 Fatigue Strength
+- 6-6 Endurance Limit Modifying Factors (Marin factors: k_a through k_e)
+- 6-7 Stress Concentration and Notch Sensitivity
+- 6-8 Characterizing Fluctuating Stresses
+- 6-9 Fatigue Failure Criteria for Fluctuating Stress (Goodman, Gerber, Soderberg)
+
+**Ch. 9 Sub-Sections (Welding):**
+- 9-1 Welding Symbols
+- 9-2 Butt and Fillet Welds
+- 9-3 Stresses in Welded Joints in Torsion (eccentric shear)
+- 9-4 Stresses in Welded Joints in Bending (eccentric bending)
+- 9-5 The Strength of Welded Joints
+- 9-6 Static Loading
+- 9-7 Fatigue Loading
+- 9-8 Resistance Welding
+- 9-9 Adhesive Bonding
+
+### Inman — *Engineering Vibration* (4th ed.)
+1. Introduction to Vibration and the Free Response
+2. Response to Harmonic Excitation
+3. General Forced Response
+4. Multiple-Degree-of-Freedom Systems
+5. Design for Vibration Suppression
+6. Distributed-Parameter Systems
+7. Vibration Testing and Experimental Modal Analysis
+8. Finite Element Method
+
+*Note: 8 chapters total — there is no Ch. 9.*
+
+### Hertzberg, Vinci, Hertzberg — *Deformation and Fracture Mechanics of Engineering Materials* (6th ed.)
+
+**Section One: Recoverable and Nonrecoverable Deformation**
+1. Elastic Response of Solids
+2. Yielding and Plastic Flow
+3. Controlling Strength
+4. Time-Dependent Deformation
+
+**Section Two: Fracture Mechanics of Engineering Materials**
+5. Fracture: An Overview
+6. Elements of Fracture Mechanics
+7. Fracture Toughness
+8. Environment-Assisted Cracking
+9. Cyclic Stress and Strain Fatigue
+10. Fatigue Crack Propagation
+11. Analyses of Engineering Failures
+12. Consequences of Product Failure
+13. Final Thoughts

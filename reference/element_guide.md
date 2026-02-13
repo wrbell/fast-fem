@@ -53,8 +53,8 @@ What is your geometry?
 | **PIPE289** | Pipe (3-node) | 3 | ux,uy,uz,rx,ry,rz | Piping systems | ME379 |
 | **COMBIN14** | Spring-damper | 2 | varies | Springs, vibration absorbers | ME440 |
 | **MASS21** | Point mass | 1 | ux,uy,uz,rx,ry,rz | Lumped masses | ME440 |
-| **FLUID220** | 3D fluid (hex) | 20 | temp,pres | Thermal-fluid | ME379 |
-| **SURF152** | Surface effect | 4–8 | varies | Convection/radiation BCs | ME379 |
+| **FLUID116** | Thermal-fluid pipe | 2 | temp,pres | Internal flow, thermal-fluid coupling | ME379 |
+| **SURF152** | Surface effect (thermal) | 4–8 | temp | Convection/radiation BCs | ME379 |
 
 ---
 

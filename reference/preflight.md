@@ -9,10 +9,10 @@ Step-by-step checklists for each analysis type. Run through before solving to ca
 - [ ] **Units consistent** — check Model > Unit System. ANSYS default is metric (m, kg, s). If mixing, convert everything to one system first.
 - [ ] **Geometry imported cleanly** — no gaps, overlapping faces, or zero-thickness surfaces. Use SpaceClaim Repair tools.
 - [ ] **Material assigned to every body** — check Model > Materials. Missing material = default structural steel (probably wrong).
-- [ ] **Mesh quality acceptable** — check Mesh > Statistics: aspect ratio < 5, skewness < 0.95. Refine near stress concentrations.
+- [ ] **Mesh quality acceptable** — check Mesh > Statistics: aspect ratio < 5, max skewness < 0.90, average skewness < 0.33. Refine near stress concentrations.
 - [ ] **Boundary conditions applied to correct faces/edges** — visually verify in Named Selections. Wrong face = wrong answer.
 - [ ] **No rigid body motion** — model must be fully constrained. If solver fails with "pivot," you have an unconstrained DOF.
-- [ ] **Solver settings per plan/config.md** — 4–5 CPU cores, SMP mode, GPU solver OFF.
+- [ ] **Solver settings per plan/config.md** — 4 CPU cores, SMP mode, GPU solver OFF.
 - [ ] **Save project before solving** — ANSYS can crash mid-solve. Save your .wbpj.
 
 ---
@@ -152,8 +152,8 @@ Step-by-step checklists for each analysis type. Run through before solving to ca
   - [ ] Outlet: pressure-outlet (usually 0 gauge)
   - [ ] Walls: no-slip (default). Specify thermal BC if heat transfer.
 - [ ] Solution methods: SIMPLE or Coupled scheme
-- [ ] Residual convergence criteria: default 1e-3, tighten to 1e-6 for accuracy
-- [ ] CPU cores: 4–5 per plan/config.md
+- [ ] Residual convergence criteria: default 1e-3, tighten to 1e-4 or 1e-5 for accuracy. Also monitor physical quantities (mass flow, forces) for convergence.
+- [ ] CPU cores: 4 per plan/config.md
 
 ### Post-Solve
 - [ ] Residuals converged? All below target and flat for 100+ iterations.

@@ -31,7 +31,7 @@ Compressed into 9 weeks: 1 setup week, spring break for theory, 7 hands-on weeks
 - [ ] Day 2 Tue (2 hrs): ANSYS 2D plane stress — plate with hole. Structured vs. unstructured meshing.
 - [ ] Day 3 Wed (2 hrs): Read Hughes Ch. 3 (shape functions, assembly). Buckling tutorial — validate Euler's formula.
 - [ ] Day 4 Thu (2 hrs): Mesh convergence study — document stress error vs. element size plot.
-- [ ] Day 5 Fri (2 hrs): Welded joints intro — Shigley Ch. 9.1–9.6 (static weld strength, eccentric loads). Model fillet weld in ANSYS; validate against hand calc.
+- [ ] Day 5 Fri (2 hrs): Welded joints intro — Shigley Ch. 9.1–9.6 (weld symbols, stress analysis, strength, static loading). Model fillet weld in ANSYS; validate against hand calc.
 
 **Milestone:** 2D plate + mesh convergence documented. First weld FEA compared to Shigley.
 
@@ -43,12 +43,12 @@ Compressed into 9 weeks: 1 setup week, spring break for theory, 7 hands-on weeks
 
 Use break to read ahead — no new ANSYS sims required. This pays off in Weeks 3–8 when you can focus on hands-on work.
 
-- [ ] Day 1 (1.5 hrs): Hughes Ch. 4 (isoparametric elements, quadrature).
+- [ ] Day 1 (1.5 hrs): Hughes Ch. 4 (mixed and penalty methods, reduced integration).
 - [ ] Day 2 (1.5 hrs): Cottrell Ch. 1–2 (heat as FEM problem, weak form). Cengel Ch. 2 (conduction, convection).
-- [ ] Day 3 (1.5 hrs): Shigley Ch. 6.1–6.3 (S-N curves, endurance limit). Shigley Ch. 9.7–9.9 (weld fatigue).
-- [ ] Day 4 (1.5 hrs): Hertzberg Ch. 5–8 (weld fatigue methods, hot-spot stress, variable amplitude).
-- [ ] Day 5 (1.5 hrs): Hughes Ch. 7 (beams — Timoshenko vs. Euler-Bernoulli). Hughes Ch. 8 (Kirchhoff plates/shells).
-- [ ] Day 6 (1 hr): Inman Ch. 4–6, Ch. 9 skim (vibrations overview — forced, damped, modal).
+- [ ] Day 3 (1.5 hrs): Shigley Ch. 6.1–6.6 (fatigue intro, S-N method, endurance limit, Marin factors). Shigley Ch. 9.7 (weld fatigue).
+- [ ] Day 4 (1.5 hrs): Hertzberg Ch. 5–6 (fracture overview, stress intensity factors), Ch. 9–10 (cyclic fatigue, crack propagation).
+- [ ] Day 5 (1.5 hrs): Hughes Ch. 5 (plates and beams — C⁰ approach, Timoshenko vs. Euler-Bernoulli). Hughes Ch. 6 (curved structural elements — shells).
+- [ ] Day 6 (1 hr): Inman Ch. 1–6 skim (vibrations overview — free, forced, damped, MDOF, absorbers, beam vibration).
 - [ ] Weekend (1 hr): Outline Apr 27 project — brainstorm welded component for capstone.
 
 **Milestone:** Core theory for Weeks 3–8 front-loaded. Project concept drafted.
@@ -76,7 +76,7 @@ Use break to read ahead — no new ANSYS sims required. This pays off in Weeks 3
 - [ ] Day 1 (2 hrs): ANSYS beam element tutorial. Simply supported beam + multi-span beam. Validate δ = PL³/48EI.
 - [ ] Day 2 (2 hrs): Plate — shell tutorial for flat plate under pressure. Validate deflection.
 - [ ] Day 3 (2 hrs): ANSYS cylindrical pressure vessel — validate hoop stress σ = pr/t.
-- [ ] Day 4 (2 hrs): Welded shafts — Hertzberg Ch. 6. Simulate welded shaft under torque using contacts.
+- [ ] Day 4 (2 hrs): Welded shafts — Hertzberg Ch. 6 (fracture mechanics — apply stress intensity factors to weld defects). Simulate welded shaft under torque using contacts.
 - [ ] Day 5 (2 hrs): Model shaft-bearing assembly, check weld stresses. Tie to ME3601 shaft project.
 
 **Milestone:** Beam/plate/shell deflection validated. Welded shaft FEA completed.
@@ -88,7 +88,7 @@ Use break to read ahead — no new ANSYS sims required. This pays off in Weeks 3
 **SMART goal:** Natural frequencies matching Inman; harmonic response validated
 **Note:** ME3601 Exam II Mar 26 — lighter load that day
 
-- [ ] Day 1 (2 hrs): Hughes Ch. 9 (eigenvalue problems). ANSYS Modal tutorial — simple oscillator.
+- [ ] Day 1 (2 hrs): Hughes Ch. 10 (eigenvalue problem solution techniques). ANSYS Modal tutorial — simple oscillator.
 - [ ] Day 2 (2 hrs): Multi-DOF modal sim — compare to MATLAB eigenvalue solver. Validate ω = √(k/m).
 - [ ] Day 3 (2 hrs): Welded assembly vibration — modal analysis on welded gear-shaft assembly.
 - [ ] Day 4 (1 hr, light — exam day): ANSYS Harmonic Response — frequency sweep with damping.
@@ -116,11 +116,11 @@ Use break to read ahead — no new ANSYS sims required. This pays off in Weeks 3
 **Course tie-in:** ME3601 fatigue/shafts; ME440 FEM vibration
 **SMART goal:** Nonlinear weld sim complete; fatigue life validated against handbook
 
-- [ ] Day 1 (2 hrs): Shigley Ch. 6 deep-dive + Hertzberg Ch. 5 (hot-spot stress method).
+- [ ] Day 1 (2 hrs): Shigley Ch. 6 deep-dive + Hertzberg Ch. 9 (cyclic stress-strain fatigue, S-N approach).
 - [ ] Day 2 (2 hrs): ANSYS Fatigue Tool — multiaxial fatigue on welded shaft. Validate life cycles.
-- [ ] Day 3 (2 hrs): Hughes Ch. 5–6 (nonlinearity). Nonlinear static — plasticity in welds (large deformation).
+- [ ] Day 3 (2 hrs): Nonlinear FEM theory (beyond Hughes' linear scope — see Bathe or Crisfield for reference). Nonlinear static — plasticity in welds (large deformation).
 - [ ] Day 4 (2 hrs): Nonlinear contact sim on gears. Vibration-fatigue combo — ME440 harmonic loads + fatigue life.
-- [ ] Day 5 (2 hrs): Hertzberg Ch. 9 (weld optimization). Refine fatigue model.
+- [ ] Day 5 (2 hrs): Hertzberg Ch. 10–11 (fatigue crack propagation, engineering failure analysis). Refine fatigue model.
 
 **Milestone:** Nonlinear weld plasticity simulated. Fatigue life validated against handbook/Shigley.
 

@@ -5,7 +5,7 @@
 
 ### CPU
 - Intel Xeon W3-2425 (6 cores / 12 threads, 3.0–4.4 GHz Turbo, 130W, 15MB cache)
-- Recommend using 4–5 cores for ANSYS solver, leaving 1–2 for OS/UI
+- Recommend using 4 cores for ANSYS solver, leaving 2 for OS/UI (ANSYS allows 4 cores without HPC license tokens)
 
 ### Memory
 - 64GB DDR5-4800 RDIMM ECC (4x16GB)
@@ -24,14 +24,14 @@
 
 ## ANSYS Student Edition Limits
 These element count caps — not hardware — are the real bottleneck:
-- Mechanical: ~128,000 nodes/elements
-- Fluent: ~512,000 cells
+- Mechanical: ~128,000 nodes+elements combined (contact elements and remote points count toward this limit; verify after installation — limits vary by version year)
+- Fluent: ~512,000 cells+nodes combined
 - CFX: ~512,000 nodes
-- HFSS: ~100,000 elements
+- HFSS: ~64,000 elements (3D volume)
 
 ## Recommended ANSYS Workbench Settings
-1. **Solver cores**: Set to 4–5 (Tools > Solve Process Settings > Advanced > Max Number of Cores)
-2. **GPU solver**: Disable (Mechanical > Analysis Settings > GPU Acceleration = Off)
+1. **Solver cores**: Set to 4 (Tools > Solve Process Settings > Advanced > Max Number of Utilized Processors)
+2. **GPU solver**: Disable (Tools > Solve Process Settings > Advanced > GPU Acceleration = Off)
 3. **Memory**: Default allocation is fine; 64GB gives headroom for mesh convergence studies
 4. **Distributed solve (DMP)**: Not needed with 6 cores — use shared-memory parallel (SMP) instead
 
@@ -39,14 +39,14 @@ These element count caps — not hardware — are the real bottleneck:
 
 ### ANSYS Mechanical (Structural/Thermal)
 - ~95.5% multi-core efficiency (Puget Systems benchmarks)
-- Student Edition models (up to 128K elements): **seconds to low minutes** for linear static and modal analysis
+- Student Edition models (up to ~128K nodes+elements): **seconds to low minutes** for linear static and modal analysis
 - Nonlinear (plasticity, contact, large deformation): slower but manageable at Student Edition element counts
 - 4.4 GHz single-thread turbo helps — Mechanical's sparse direct solver (APDL) has serial bottlenecks where clock speed matters
 
 ### ANSYS Fluent (CFD)
-- ~98.4% multi-core efficiency — scales better than Mechanical (Puget Systems benchmarks)
+- ~98% multi-core efficiency — scales better than Mechanical (Puget Systems benchmarks)
 - ANSYS rule of thumb: **50K–100K cells per core**
-- 6 cores × 85K cells = ~512K cells — lines up with the Student Edition cap
+- 4 cores × ~128K cells = ~512K cells — lines up with the Student Edition cap
 - Memory: 8GB/core recommended, we have ~10.7GB/core — above target
 
 ### GPU (RTX 2000 Ada)
@@ -72,6 +72,6 @@ These element count caps — not hardware — are the real bottleneck:
 ## Planning Implications
 - **Mesh convergence studies**: Run freely — 64GB can handle Student Edition max element counts many times over
 - **Parameter sweeps**: With 6 cores and fast storage, batch runs of multiple configurations are practical
-- **CFD (Fluent)**: CPU solver with 4–5 cores is well-matched to the 512K cell Student Edition cap. Expect solve times of minutes, not hours
-- **Coupled multi-physics (Week 10–12)**: Memory is sufficient; solve times will be the constraint — keep meshes efficient
+- **CFD (Fluent)**: CPU solver with 4 cores is well-matched to the 512K cell Student Edition cap. Expect solve times of minutes, not hours
+- **Coupled multi-physics (Week 6–8)**: Memory is sufficient; solve times will be the constraint — keep meshes efficient
 - **No GPU solver workflows**: Student Edition doesn't include the required license tier anyway

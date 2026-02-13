@@ -9,33 +9,33 @@ Hand calculations for verifying ANSYS results. Organized by analysis type.
 | Formula | Description | Source | Week |
 |---------|-------------|--------|------|
 | σ = F/A | Normal stress (axial bar) | Shigley Ch. 3 | 1 |
-| σ = My/I | Bending stress in beam | Shigley Ch. 3 | 2, 5 |
-| τ = VQ/Ib | Transverse shear stress | Shigley Ch. 3 | 5 |
+| σ = My/I | Bending stress in beam | Shigley Ch. 3 | 1, 4 |
+| τ = VQ/Ib | Transverse shear stress | Shigley Ch. 3 | 4 |
 | ε = σ/E | Hooke's law (linear elastic) | Hughes Ch. 1 | 1 |
-| ε = αΔT | Thermal strain | Cengel | 10 |
+| ε = αΔT | Thermal strain | Cengel | 3, 6 |
 
 ## Buckling
 
 | Formula | Description | Source | Week |
 |---------|-------------|--------|------|
-| P_cr = π²EI/(KL)² | Euler critical buckling load | Shigley Ch. 4 | 2 |
-| σ_cr = π²E/(KL/r)² | Critical buckling stress | Shigley Ch. 4 | 2 |
+| P_cr = π²EI/(KL)² | Euler critical buckling load | Shigley Ch. 4 | 1 |
+| σ_cr = π²E/(KL/r)² | Critical buckling stress | Shigley Ch. 4 | 1 |
 
 ## Beam Deflection
 
 | Formula | Description | Source | Week |
 |---------|-------------|--------|------|
-| δ = PL³/3EI | Cantilever, point load at tip | Hughes Ch. 7 | 1, 5 |
-| δ = PL³/48EI | Simply supported, center load | Hughes Ch. 7 | 5 |
-| δ = 5wL⁴/384EI | Simply supported, uniform load | Hughes Ch. 7 | 5 |
-| θ = TL/GJ | Angle of twist (circular shaft) | Shigley Ch. 3 | 5 |
+| δ = PL³/3EI | Cantilever, point load at tip | Hughes Ch. 5 | 1, 4 |
+| δ = PL³/48EI | Simply supported, center load | Hughes Ch. 5 | 4 |
+| δ = 5wL⁴/384EI | Simply supported, uniform load | Hughes Ch. 5 | 4 |
+| θ = TL/GJ | Angle of twist (circular shaft) | Shigley Ch. 3 | 4 |
 
 ## Pressure Vessels
 
 | Formula | Description | Source | Week |
 |---------|-------------|--------|------|
-| σ_h = pr/t | Hoop (circumferential) stress, thin-wall | Shigley Ch. 3 | 7 |
-| σ_a = pr/2t | Axial (longitudinal) stress, thin-wall | Shigley Ch. 3 | 7 |
+| σ_h = pr/t | Hoop (circumferential) stress, thin-wall | Shigley Ch. 3 | 4 |
+| σ_a = pr/2t | Axial (longitudinal) stress, thin-wall | Shigley Ch. 3 | 4 |
 
 ## Thermal / Heat Transfer
 
@@ -49,19 +49,19 @@ Hand calculations for verifying ANSYS results. Organized by analysis type.
 
 | Formula | Description | Source | Week |
 |---------|-------------|--------|------|
-| ω_n = √(k/m) | Natural frequency (1-DOF) | Inman Ch. 9 | 7 |
-| f_n = ω_n/2π | Natural frequency in Hz | Inman Ch. 9 | 7 |
-| ω_d = ω_n√(1 − ζ²) | Damped natural frequency | Inman Ch. 4 | 8 |
-| X = F₀/√((k−mω²)²+(cω)²) | Steady-state amplitude (forced, damped) | Inman Ch. 4 | 8 |
-| T = √(1+(2ζr)²)/√((1−r²)²+(2ζr)²) | Transmissibility (r = ω/ω_n) | Inman Ch. 5 | 8 |
+| ω_n = √(k/m) | Natural frequency (1-DOF) | Inman Ch. 1 | 5 |
+| f_n = ω_n/2π | Natural frequency in Hz | Inman Ch. 1 | 5 |
+| ω_d = ω_n√(1 − ζ²) | Damped natural frequency | Inman Ch. 1 | 5 |
+| X = F₀/√((k−mω²)²+(cω)²) | Steady-state amplitude (forced, damped) | Inman Ch. 2 | 5 |
+| T = √(1+(2ζr)²)/√((1−r²)²+(2ζr)²) | Transmissibility (r = ω/ω_n) | Inman Ch. 2 | 5 |
 
 ## Fatigue
 
 | Formula | Description | Source | Week |
 |---------|-------------|--------|------|
-| σ_a/S_e + σ_m/S_ut = 1 | Modified Goodman line | Shigley Ch. 6 | 4, 11 |
-| S_e = k_a·k_b·k_c·k_d·k_e·S_e' | Endurance limit with Marin factors | Shigley Ch. 6 | 11 |
-| N = (σ_rev/a)^(1/b) | S-N curve life prediction | Shigley Ch. 6 | 11 |
+| σ_a/S_e + σ_m/S_ut = 1 | Modified Goodman line | Shigley Ch. 6 | 3, 7 |
+| S_e = k_a·k_b·k_c·k_d·k_e·S_e' | Endurance limit with Marin factors | Shigley Ch. 6 | 3, 7 |
+| N = (σ_rev/a)^(1/b) | S-N curve life prediction | Shigley Ch. 6 | 3, 7 |
 
 ## Weld-Specific
 
@@ -75,7 +75,7 @@ Hand calculations for verifying ANSYS results. Organized by analysis type.
 
 | Formula | Description | Source | Week |
 |---------|-------------|--------|------|
-| Re = ρVD/μ | Reynolds number | Cengel | 9 |
-| δ = 5x/√(Re_x) | Blasius boundary layer thickness | Cengel | 9 |
-| ΔP = f(L/D)(ρV²/2) | Darcy-Weisbach (pipe friction loss) | Cengel | 9 |
-| v(r) = (ΔP/4μL)(R²−r²) | Hagen-Poiseuille velocity profile (laminar) | Cengel | 9 |
+| Re = ρVD/μ | Reynolds number | Cengel | 6 |
+| δ = 5x/√(Re_x) | Blasius boundary layer thickness | Cengel | 6 |
+| ΔP = f(L/D)(ρV²/2) | Darcy-Weisbach (pipe friction loss) | Cengel | 6 |
+| v(r) = (ΔP/4μL)(R²−r²) | Hagen-Poiseuille velocity profile (laminar) | Cengel | 6 |
