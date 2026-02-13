@@ -24,12 +24,12 @@ Every simulation in this project follows this loop:
    └── What quantity do I need? What assumptions am I making?
 
 2. Hand calculation
-   └── Solve analytically using known formulas (see validation.md)
+   └── Solve analytically using known formulas (see reference/validation.md)
    └── This is the "expected answer" — compute it BEFORE running ANSYS
 
 3. Build the FEA model
    └── Geometry → Material → Mesh → BCs → Solver settings
-   └── Use checklists/preflight.md before solving
+   └── Use reference/preflight.md before solving
 
 4. Solve and extract results
 
@@ -45,7 +45,7 @@ Every simulation in this project follows this loop:
    └── Check hand calc (is the formula applicable?)
 
 7. Document
-   └── Validation report + sim_log.md entry
+   └── Validation report + results/sim_log.md entry
 ```
 
 The key discipline: **always compute the hand calculation first.** If you run ANSYS first, confirmation bias will make any result look "close enough."
@@ -113,7 +113,7 @@ Large errors don't always mean the FEA is wrong. Investigate systematically:
 
 Results are compared against these sources, in order of preference:
 
-1. **Closed-form analytical solutions** — exact for the idealized problem (validation.md formulas)
+1. **Closed-form analytical solutions** — exact for the idealized problem (reference/validation.md formulas)
 2. **Published benchmark problems** — ANSYS Verification Manual, NAFEMS benchmarks
 3. **Textbook examples** — Shigley, Inman, Cengel worked examples
 4. **MATLAB / Python computation** — eigenvalue solvers, numerical integration
@@ -130,7 +130,7 @@ Every simulation produces two artifacts:
 ### 1. Validation Report (`templates/validation_report.md`)
 Full documentation of the simulation: problem, model setup, mesh, BCs, results, comparison to hand calc, discussion, and lessons learned. This is the detailed record.
 
-### 2. Sim Log Entry (`sim_log.md`)
+### 2. Sim Log Entry (`results/sim_log.md`)
 One-paragraph summary: date, model description, key result, hand calc comparison, error, and lesson. This is the chronological index.
 
 ### Post-Mortem (`templates/post_mortem.md`)
@@ -158,4 +158,4 @@ Signs a simulation needs more work:
 
 ---
 
-*Formula reference: validation.md | Checklists: checklists/preflight.md | Report template: templates/validation_report.md*
+*Formula reference: reference/validation.md | Checklists: reference/preflight.md | Report template: templates/validation_report.md*

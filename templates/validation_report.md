@@ -59,7 +59,7 @@
 | | | | | Yes / No |
 
 ### Hand Calculation
-*Show the analytical solution used for comparison. Reference validation.md formula.*
+*Show the analytical solution used for comparison. Reference reference/validation.md formula.*
 
 ### Contour Plots / Visualizations
 <!-- ![Stress Contour](../results/week_XX/stress_contour.png) -->
@@ -88,4 +88,4 @@
 
 ---
 
-*Template: templates/validation_report.md | Formula reference: validation.md*
+*Template: templates/validation_report.md | Formula reference: reference/validation.md*

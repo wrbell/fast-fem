@@ -47,7 +47,7 @@
 - Flow regime: (laminar / turbulent)
 - Turbulence model (if turbulent): (k-ε / k-ω SST / other)
 
-## Solver Settings (per config.md)
+## Solver Settings (per plan/config.md)
 
 - Solver: Fluent CPU (4–5 cores)
 - Mesh cells: (target, max 512K for Student Edition)
@@ -62,7 +62,7 @@
 | Thermal strain | ε = αΔT | | < 5% |
 | | | | |
 
-*Reference: validation.md for formula lookup*
+*Reference: reference/validation.md for formula lookup*
 
 ## Deliverables
 

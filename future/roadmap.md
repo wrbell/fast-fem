@@ -66,7 +66,7 @@ ANSYS Workbench is fine for learning and Student Edition models. At real-world s
 
 See [hardware_upgrades.md](hardware_upgrades.md) for details.
 
-Current bottleneck order (from config.md):
+Current bottleneck order (from plan/config.md):
 1. **CPU** — 6 cores is the first constraint for anything beyond Student Edition
 2. **RAM** — 64GB is fine now, but large assemblies need more
 3. **GPU** — only matters with CFD Enterprise license

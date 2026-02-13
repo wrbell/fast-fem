@@ -7,8 +7,8 @@ Compressed into 9 weeks: 1 setup week, spring break for theory, 7 hands-on weeks
 - ~4 hrs/week theory, ~5 hrs ANSYS hands-on, ~1 hr review/milestones
 - Weld content integrated where it aligns with ME3601
 - Real-life events: spring break (Mar 2–8), ME3601 Exam II (Mar 26)
-- Validate every simulation against hand calculations (see validation.md)
-- Hardware: 6-core Xeon, 64GB RAM, CPU solver only (see config.md)
+- Validate every simulation against hand calculations (see reference/validation.md)
+- Hardware: 6-core Xeon, 64GB RAM, CPU solver only (see plan/config.md)
 
 ---
 
@@ -17,7 +17,7 @@ Compressed into 9 weeks: 1 setup week, spring break for theory, 7 hands-on weeks
 
 - [ ] Morning (2 hrs): Unpack Dell Precision 5860. Install OS updates, NVIDIA driver for RTX 2000 Ada.
 - [ ] Afternoon (2 hrs): Download and install ANSYS Student Edition (ansys.com/academic/students). Verify Workbench launches.
-- [ ] Evening (1 hr): Configure ANSYS solver settings per config.md (4–5 CPU cores, GPU solver off, SMP mode). Run trivial test — 1D bar under tension, check stress ≈ F/A.
+- [ ] Evening (1 hr): Configure ANSYS solver settings per plan/config.md (4–5 CPU cores, GPU solver off, SMP mode). Run trivial test — 1D bar under tension, check stress ≈ F/A.
 
 **Milestone:** Desktop operational. ANSYS verified with a trivial simulation.
 
@@ -102,7 +102,7 @@ Use break to read ahead — no new ANSYS sims required. This pays off in Weeks 3
 **Course tie-in:** ME379 labs (viscous flows, boundary layers); cross-tie thermal + stress
 **SMART goal:** Pipe flow validated against analytical; thermo-mechanical sim validated (ε = αΔT)
 
-- [ ] Day 1 (2 hrs): ANSYS Fluent — laminar pipe flow (CPU solver, 4–5 cores per config.md). Validate Hagen-Poiseuille.
+- [ ] Day 1 (2 hrs): ANSYS Fluent — laminar pipe flow (CPU solver, 4–5 cores per plan/config.md). Validate Hagen-Poiseuille.
 - [ ] Day 2 (2 hrs): External flow — boundary layer over flat plate. Compare to Blasius solution.
 - [ ] Day 3 (2 hrs): ANSYS thermal-stress coupling tutorial — beam with temperature gradient. Validate ε = αΔT.
 - [ ] Day 4 (2 hrs): Model convection on welded pipe — tie fluid + thermal on practical geometry.

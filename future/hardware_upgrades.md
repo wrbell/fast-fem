@@ -1,6 +1,6 @@
 # Hardware Upgrade Path
 
-Upgrade priority for the Dell Precision 5860 as simulation needs grow beyond ANSYS Student Edition. Reference: config.md for current specs.
+Upgrade priority for the Dell Precision 5860 as simulation needs grow beyond ANSYS Student Edition. Reference: plan/config.md for current specs.
 
 ---
 
@@ -111,4 +111,4 @@ Upgrade priority for the Dell Precision 5860 as simulation needs grow beyond ANS
 
 ---
 
-*Reference: config.md for current hardware details and ANSYS settings.*
+*Reference: plan/config.md for current hardware details and ANSYS settings.*

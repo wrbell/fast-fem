@@ -54,7 +54,7 @@
 | Peak amplitude | X = F₀/√((k−mω²)²+(cω)²) | | < 10% |
 | | | | |
 
-*Reference: validation.md for formula lookup*
+*Reference: reference/validation.md for formula lookup*
 
 ## Deliverables
 

@@ -54,7 +54,7 @@
 | | | | < 5% |
 | | | | < 5% |
 
-*Reference: validation.md for formula lookup*
+*Reference: reference/validation.md for formula lookup*
 
 ## Deliverables
 

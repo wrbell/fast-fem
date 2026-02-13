@@ -12,7 +12,7 @@ Step-by-step checklists for each analysis type. Run through before solving to ca
 - [ ] **Mesh quality acceptable** — check Mesh > Statistics: aspect ratio < 5, skewness < 0.95. Refine near stress concentrations.
 - [ ] **Boundary conditions applied to correct faces/edges** — visually verify in Named Selections. Wrong face = wrong answer.
 - [ ] **No rigid body motion** — model must be fully constrained. If solver fails with "pivot," you have an unconstrained DOF.
-- [ ] **Solver settings per config.md** — 4–5 CPU cores, SMP mode, GPU solver OFF.
+- [ ] **Solver settings per plan/config.md** — 4–5 CPU cores, SMP mode, GPU solver OFF.
 - [ ] **Save project before solving** — ANSYS can crash mid-solve. Save your .wbpj.
 
 ---
@@ -35,9 +35,9 @@ Step-by-step checklists for each analysis type. Run through before solving to ca
 - [ ] Von Mises stress contour — is max stress at expected location?
 - [ ] Deformation plot — does it deform in the expected direction?
 - [ ] Check reaction forces — do they sum to applied load? (Newton's 3rd law)
-- [ ] Compare max stress to hand calc (validation.md)
+- [ ] Compare max stress to hand calc (reference/validation.md)
 - [ ] Check max stress against yield — if σ > σ_y, linear elastic is invalid
-- [ ] Document in sim_log.md and validation report
+- [ ] Document in results/sim_log.md and validation report
 
 ---
 
@@ -153,7 +153,7 @@ Step-by-step checklists for each analysis type. Run through before solving to ca
   - [ ] Walls: no-slip (default). Specify thermal BC if heat transfer.
 - [ ] Solution methods: SIMPLE or Coupled scheme
 - [ ] Residual convergence criteria: default 1e-3, tighten to 1e-6 for accuracy
-- [ ] CPU cores: 4–5 per config.md
+- [ ] CPU cores: 4–5 per plan/config.md
 
 ### Post-Solve
 - [ ] Residuals converged? All below target and flat for 100+ iterations.

@@ -114,4 +114,4 @@ To get clean screenshots in ANSYS Mechanical:
 
 ---
 
-*Template: templates/visual_guide.md*
+*Reference: reference/visual_guide.md*

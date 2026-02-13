@@ -31,7 +31,7 @@ Lead with the validation, not the software.
 
 ### "What element type would you use for [X]?"
 
-Refer to `checklists/element_guide.md`. Key talking points:
+Refer to `reference/element_guide.md`. Key talking points:
 
 - **Thin-walled structures** → shell elements (SHELL181/281). Mention: "I'd check t/L ratio first."
 - **Solid parts, simple geometry** → hex (SOLID186) with mapped mesh. "Hex converge faster than tet."
@@ -134,10 +134,10 @@ Things that make interviewers doubt your simulation skills:
 
 Before any interview, review:
 
-1. Your V&V workflow (methodology.md) — be able to recite it
+1. Your V&V workflow (reference/methodology.md) — be able to recite it
 2. Your best case study — rehearse the 2-minute version
 3. Your best post-mortem — the "debugging story" is gold
-4. Element selection basics (checklists/element_guide.md)
+4. Element selection basics (reference/element_guide.md)
 5. Mesh convergence (what it is, when it fails, stress singularities)
 6. Linear vs nonlinear (when to switch)
 7. Your questions for them (above)

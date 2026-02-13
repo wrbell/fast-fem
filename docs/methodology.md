@@ -62,4 +62,4 @@ Every critical result includes a mesh convergence study:
 
 ---
 
-*Full methodology details: [methodology.md on GitHub](https://github.com/wrbell/fast-fem/blob/main/methodology.md)*
+*Full methodology details: [reference/methodology.md on GitHub](https://github.com/wrbell/fast-fem/blob/main/reference/methodology.md)*

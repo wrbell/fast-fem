@@ -223,7 +223,7 @@ Organized by topic. Textbook chapters map to the canonical schedule weeks where 
 | Tool | Use | Schedule Week |
 |------|-----|---------------|
 | ANSYS Student (Workbench + Mechanical) | Primary FEA | All |
-| ANSYS Fluent | CFD (CPU solver only — see config.md) | 6 |
+| ANSYS Fluent | CFD (CPU solver only — see plan/config.md) | 6 |
 | ANSYS DesignXplorer | Optimization | 6 |
 | MATLAB | Hand calc validation, eigenvalue comparison | 1, 5 |
 | Python | Optional 1D FEM coding for intuition | 1 (optional) |
