@@ -2,6 +2,12 @@
 
 Accelerated self-study in Finite Element Method theory and ANSYS simulation, built to support three concurrent mechanical engineering course projects at the University of Michigan (Winter 2026).
 
+**Status:** Pre-launch — Week 0 begins Feb 23, 2026
+
+## What Makes This Different
+
+Most FEA portfolios show contour plots. This one shows the engineering behind them. Every simulation is validated against an analytical hand calculation computed *before* running the solver. Mesh convergence studies prove numerical rigor. Post-mortems document what went wrong and what was learned. The methodology is explicit and repeatable — not "ANSYS gave me this number," but "here's why I trust it."
+
 ## Objective
 
 Go from zero ANSYS experience to validated multi-physics simulations in 9 weeks, producing portfolio-quality FEA work for real engineering projects across structural, vibration, and thermal-fluid domains.
@@ -16,6 +22,33 @@ Go from zero ANSYS experience to validated multi-physics simulations in 9 weeks,
 
 All projects due **Apr 27, 2026**.
 
+## Quick Start
+
+```bash
+git clone https://github.com/wrbell/fast-fem.git
+cd fast-fem
+pip install -r requirements.txt
+jupyter notebook notebooks/static_stress.ipynb
+```
+
+The notebooks are ready to use — plug in your ANSYS results and geometry parameters, and they compute the analytical solution and error automatically.
+
+To generate a mesh convergence plot from data:
+```bash
+python scripts/mesh_convergence.py scripts/example_convergence.csv \
+  -y "Max Stress (MPa)" -t "Cantilever Beam" -o convergence.png
+```
+
+## Getting Started with ANSYS
+
+Week 0 ([plan/schedule.md](plan/schedule.md#week-0--feb-23-sunday-desktop-setup)) covers the full setup:
+
+1. Install ANSYS Student Edition from [ansys.com/academic/students](https://www.ansys.com/academic/students)
+2. Configure solver settings per [plan/config.md](plan/config.md) (4–5 CPU cores, GPU solver off, SMP mode)
+3. Run the trivial test: 1D bar under tension, verify stress = F/A
+
+From there, each week builds on the previous — static → thermal → modal → CFD → coupled → capstone.
+
 ## Approach
 
 1. **Theory** — Hughes (FEM), Shigley (machine design), Inman (vibrations), Cengel (heat transfer), Metal Fatigue Handbook
@@ -28,7 +61,6 @@ All projects due **Apr 27, 2026**.
 
 ```
 fast-fem/
-├── README.md                       ← you are here
 ├── plan/
 │   ├── schedule.md                 ← 9-week study plan (Feb 23 – Apr 19)
 │   ├── config.md                   ← hardware specs & ANSYS settings
@@ -82,3 +114,7 @@ Post-program roadmap in [`future/`](future/):
 - [**Solvers**](future/solvers.md) — LS-DYNA, commercial ANSYS, Abaqus, OpenFOAM
 - [**Pre/Post**](future/pre_post.md) — HyperMesh, ANSA, META, ParaView, Tecplot
 - [**Hardware Upgrades**](future/hardware_upgrades.md) — CPU, RAM, GPU upgrade path for the Dell 5860
+
+## License
+
+Academic coursework — University of Michigan, Winter 2026. Not a product or library.
