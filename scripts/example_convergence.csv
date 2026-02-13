@@ -1,0 +1,12 @@
+# Mesh Convergence Example Data
+# Cantilever beam, 1 kN tip load, max von Mises stress at fixed support
+# Usage: python mesh_convergence.py example_convergence.csv -y "Max Stress (MPa)" -t "Cantilever Beam" -o convergence.png
+elements,stress_mpa
+200,87.3
+500,98.2
+1000,108.1
+2000,112.5
+4000,116.2
+8000,118.3
+16000,119.0
+32000,119.1

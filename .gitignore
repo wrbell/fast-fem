@@ -1,0 +1,67 @@
+# ANSYS Workbench project files
+*.wbpj
+*_files/
+*.mechdb
+*.mechdat
+*.dsdb
+*.agdb
+*.rst
+*.rth
+*.rmg
+*.err
+*.esav
+*.mntr
+*.log
+*.lock
+*.tmp
+
+# ANSYS solver output (large binaries)
+*.d
+*.emat
+*.full
+*.sub
+*.tri
+*.mode
+
+# ANSYS Fluent
+*.cas
+*.cas.h5
+*.dat
+*.dat.h5
+*.trn
+cleanup-fluent-*
+
+# ANSYS DesignXplorer
+*.optiSLang/
+
+# SpaceClaim / CAD temp files
+*.scdoc.bak
+~$*.scdoc
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+env/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Jekyll build output (GitHub Pages builds remotely)
+docs/_site/
+docs/.jekyll-cache/
+docs/.sass-cache/
