@@ -45,7 +45,7 @@ Organized by topic. Textbook chapters map to the canonical schedule weeks where 
 | Ch. 2 | 1D heat conduction, convection | 2 (break), 3 |
 | N-S chapter | Navier-Stokes, fluid elements | 6 |
 
-### Metal Fatigue Handbook
+### Stephens, Fatemi, Stephens & Fuchs — *Metal Fatigue in Engineering* (Wiley, 3rd ed., ISBN 978-1119670578)
 | Chapter | Topic | Schedule Week |
 |---------|-------|---------------|
 | Ch. 5–8 | Weld fatigue methods, hot-spot stress, variable amplitude | 2 (break) |
@@ -240,4 +240,4 @@ Organized by topic. Textbook chapters map to the canonical schedule weeks where 
 4. Shigley Ch. 6 + Ch. 9.7–9.9 (fatigue + weld fatigue)
 5. Hughes Ch. 7–8 (beams, plates, shells)
 6. Inman Ch. 4–6, 9 (vibrations overview)
-7. Metal Fatigue Handbook Ch. 5–8 (weld specifics)
+7. Stephens et al. Ch. 5–8 (weld fatigue specifics)

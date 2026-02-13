@@ -68,7 +68,7 @@ See `plan/references.md` for the full index. Primary sources:
 - **Shigley** — Machine design, welded joints, fatigue
 - **Inman** — Vibrations
 - **Cengel** — Heat transfer
-- **Metal Fatigue Handbook** — Weld fatigue methods
+- **Stephens et al.** — *Metal Fatigue in Engineering* (Wiley, 3rd ed.) — weld fatigue, S-N, hot-spot stress
 - **ANSYS Student Edition** — Primary simulation tool
 
 ## Validation Approach

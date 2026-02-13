@@ -51,7 +51,7 @@ From there, each week builds on the previous — static → thermal → modal �
 
 ## Approach
 
-1. **Theory** — Hughes (FEM), Shigley (machine design), Inman (vibrations), Cengel (heat transfer), Metal Fatigue Handbook
+1. **Theory** — Hughes (FEM), Shigley (machine design), Inman (vibrations), Cengel (heat transfer), Stephens et al. (*Metal Fatigue in Engineering*)
 2. **Simulation** — ANSYS Student Edition (Mechanical, Fluent, DesignXplorer)
 3. **Validation** — Every simulation compared to analytical hand calculations ([methodology](reference/methodology.md) | [formulas](reference/validation.md))
 4. **Documentation** — Each simulation logged with model setup, mesh, BCs, results, and error analysis ([sim log](results/sim_log.md))
