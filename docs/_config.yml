@@ -1,0 +1,19 @@
+title: Fast-FEM
+description: FEM & ANSYS simulation portfolio — University of Michigan ME (Winter 2026)
+author: Willem Bell
+baseurl: "/fast-fem"
+url: ""
+
+theme: minima
+
+header_pages:
+  - about.md
+  - methodology.md
+  - case-studies.md
+
+markdown: kramdown
+kramdown:
+  input: GFM
+
+plugins:
+  - jekyll-seo-tag
