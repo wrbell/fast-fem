@@ -1,0 +1,10 @@
+{
+  "typeCheckingMode": "standard",
+  "pythonVersion": "3.11",
+  "reportMissingTypeStubs": false,
+  "exclude": [
+    ".agents",
+    "third_party",
+    "tests/fixtures/python/fail"
+  ]
+}

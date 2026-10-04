@@ -1,0 +1,3 @@
+# Notebook paths that may keep outputs, one relative path per line.
+# Use this only when the committed output is the deliverable.
+# example/reports/final.ipynb

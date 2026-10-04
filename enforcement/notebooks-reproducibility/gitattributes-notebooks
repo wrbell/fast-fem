@@ -1,0 +1,6 @@
+# Copy into the repo .gitattributes.
+# Install the filter with: nbstripout --install --attributes .gitattributes
+*.ipynb filter=nbstripout
+*.mlx binary
+# Optional after nbdime is installed:
+# *.ipynb diff=jupyternotebook

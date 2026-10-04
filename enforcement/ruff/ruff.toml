@@ -1,0 +1,42 @@
+line-length = 88
+indent-width = 4
+target-version = "py311"
+extend-include = ["*.ipynb"]
+extend-exclude = [
+  ".agents",
+  "third_party",
+  # Negative samples. pytest checks them on an explicit path.
+  "tests/fixtures/python/fail",
+  # Intentional NPY002. pytest checks this path explicitly.
+  "tests/fixtures/matlab-scientific/fail/legacy_seed.py",
+]
+
+[lint]
+select = [
+  "E",   # pycodestyle
+  "F",   # Pyflakes
+  "W",   # pycodestyle warnings
+  "I",   # isort
+  "B",   # flake8-bugbear
+  "UP",  # pyupgrade
+  "D",   # pydocstyle
+  "N",   # pep8-naming
+  "NPY", # NumPy
+  "S",   # flake8-bandit
+]
+# The select list is explicit so a Ruff upgrade cannot change CI by
+# changing the default set.
+# E501 overlaps the formatter. Ruff documents that formatted code can
+# still exceed line-length, so the formatter is the line-length check.
+# https://docs.astral.sh/ruff/formatter/#conflicting-lint-rules
+ignore = ["D105", "D107", "E501"]
+
+[lint.pydocstyle]
+convention = "numpy"
+
+[lint.per-file-ignores]
+"tests/**" = ["D", "S101"]
+"**/*.ipynb" = ["D"]
+
+[format]
+docstring-code-format = true

@@ -65,3 +65,43 @@ desktop.ini
 docs/_site/
 docs/.jekyll-cache/
 docs/.sass-cache/
+
+# Collection standards template (merged 2026-10-04)
+# --- Local data -------------------------------------------------------
+# Raw data, databases and machine-local notes never enter git.
+.local/
+data/raw/
+*.sqlite
+*.sqlite3
+
+# --- Secrets ----------------------------------------------------------
+# .env stays out; the documented example file stays in.
+.env
+.env.*
+!.env.example
+secrets/
+*.pem
+*.key
+
+# --- Copyrighted handouts ---------------------------------------------
+# Course and vendor PDFs stay local; list them in INDEX.md with a SHA-256.
+*.pdf
+# Re-include your own PDFs by exact path, after the *.pdf line
+# (pattern from F26/CFD/.gitignore):
+# !ME4301-P1/report/v1/project1.pdf
+# !ME4301-P1/docs/implementation.pdf
+
+# --- Tool output ------------------------------------------------------
+.build/qa/
+.chart-data-*/
+.revisions/
+out/*.html
+
+# --- Office temp ------------------------------------------------------
+~$*
+
+# --- Python and Jupyter -----------------------------------------------
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/

@@ -1,8 +1,28 @@
 # Fast-FEM
 
-Accelerated self-study in Finite Element Method theory and ANSYS simulation, built to support three concurrent mechanical engineering course projects at the University of Michigan (Winter 2026).
+Self-study in finite element method theory and ANSYS simulation for UM engineering courses.
 
-**Status:** Pre-launch — Week 0 begins Feb 23, 2026
+Status (2026-10-04): last commit on `main` before this rollout was 2026-03-20; current progress of the 9-week plan is TBD (see `plan/schedule.md` checkboxes and `results/sim_log.md`).
+
+Course: none (self-study that supports ME3601, ME440 and ME379 course projects).
+
+Agent file: [AGENTS.md](AGENTS.md) holds the rules for AI coding agents.
+
+## Contents
+
+- [What Makes This Different](#what-makes-this-different)
+- [Objective](#objective)
+- [Course Projects](#course-projects)
+- [Quick Start](#quick-start)
+- [Recreate](#recreate)
+- [Getting Started with ANSYS](#getting-started-with-ansys)
+- [Approach](#approach)
+- [Repository Structure](#repository-structure)
+- [Hardware](#hardware)
+- [Schedule](#schedule)
+- [Portfolio Site](#portfolio-site)
+- [Future Goals](#future-goals)
+- [License](#license)
 
 ## What Makes This Different
 
@@ -39,9 +59,16 @@ python scripts/mesh_convergence.py scripts/example_convergence.csv \
   -y "Max Stress (MPa)" -t "Cantilever Beam" -o convergence.png
 ```
 
+## Recreate
+
+| Command | What it does | Limit |
+| --- | --- | --- |
+| `pip install -r requirements.txt` | Installs numpy, matplotlib and jupyter | TBD |
+| `python scripts/mesh_convergence.py scripts/example_convergence.csv -o convergence.png` | Plots a mesh convergence study from a CSV file | Needs the CSV pairs `(element_count, result_value)` |
+
 ## Getting Started with ANSYS
 
-Week 0 ([plan/schedule.md](plan/schedule.md#week-0--feb-23-sunday-desktop-setup)) covers the full setup:
+The Week 0 section of [plan/schedule.md](plan/schedule.md#week-0--feb-23-sunday-desktop-setup) covers the full setup:
 
 1. Install ANSYS Student Edition from [ansys.com/academic/students](https://www.ansys.com/academic/students)
 2. Configure solver settings per [plan/config.md](plan/config.md) (4–5 CPU cores, GPU solver off, SMP mode)
@@ -117,4 +144,6 @@ Post-program roadmap in [`future/`](future/):
 
 ## License
 
-Academic coursework — University of Michigan, Winter 2026. Not a product or library.
+Academic coursework, University of Michigan, Winter 2026. Not a product or library.
+
+No `LICENSE` file is present in the repository. `SPDX-License-Identifier: TBD (Willem decides)`
