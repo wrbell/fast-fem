@@ -1,6 +1,6 @@
 # Fast-FEM
 
-Self-study in finite element method theory and ANSYS simulation for UM engineering courses.
+Self-study in finite element method theory and ANSYS simulation for UM courses.
 
 Status (2026-10-04): last commit on `main` before this rollout was 2026-03-20; current progress of the 9-week plan is TBD (see `plan/schedule.md` checkboxes and `results/sim_log.md`).
 
