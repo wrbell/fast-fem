@@ -1,6 +1,10 @@
 # Copy into the repo .gitattributes.
-# Install the filter with: nbstripout --install --attributes .gitattributes
-*.ipynb filter=nbstripout
+# Strip notebook outputs with the pre-commit nbstripout hook only.
+# Do not enable "*.ipynb filter=nbstripout" (the clean filter): on 2026-10-04
+# it combined with pre-commit's stash of unstaged changes and erased the
+# executed outputs of an unstaged notebook in F26/CFD.
+# This comment keeps that text on purpose: "nbstripout --install --attributes"
+# finds it and does not add the filter line.
 *.mlx binary
 # Optional after nbdime is installed:
 # *.ipynb diff=jupyternotebook

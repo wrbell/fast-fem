@@ -1,7 +1,7 @@
 ---
 # Managed by standards/tools/adopt_standards.py.
 # Re-run the tool to add or remove a domain; do not edit by hand.
-# Jobs copied from wrbell/standards/.github/workflows/ at 0fe6a29de0f22af075ba51fafff9e03d1238d54d.
+# Jobs copied from wrbell/standards/.github/workflows/ at 2f2c95edef473ed0b5ec96d07d50b37721995c17.
 name: Standards
 on:
   pull_request:
@@ -85,7 +85,12 @@ jobs:
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
       - name: Check notebooks
         if: "${{ hashFiles('**/*.ipynb', '**/*.mlx', '**/pyproject.toml') != '' }}"
-        run: python3 tools/check_notebooks.py --root .
+        run: |
+          if [ -f keep-output.txt ]; then
+            python3 tools/check_notebooks.py --root . --allow keep-output.txt
+          else
+            python3 tools/check_notebooks.py --root .
+          fi
       - name: Self-test the passing notebook tree
         if: "${{ hashFiles('tests/fixtures/notebooks-reproducibility/pass/**') != '' }}"
         run: python3 tools/check_notebooks.py --root tests/fixtures/notebooks-reproducibility/pass
